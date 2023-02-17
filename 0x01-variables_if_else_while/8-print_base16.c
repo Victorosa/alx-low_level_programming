@@ -1,30 +1,25 @@
 #include <stdio.h>
 
 /**
- * main - print single digit numbers
+ * main - print the letters of the alphabet
  *
- * Description: print single digit numbers with commas
+ * Description: print the letters of the alphabet except e, q
  *
  * Return: Always 0 (Success)
  */
 
 int main(void)
 {
-	int i;
+	int i = 0;
 
-	i = 48;
-
-	while (i < 58)
+	while (i < 48)
 	{
-		putchar(i);
-		if (i != 57)
-		{
-			putchar(44);
-			putchar(32);
-		}
+		if (i < 10)
+			putchar(i + '0');
+		else if (i > 41)
+			putchar(i - 10 + 'A');
 		i++;
 	}
-
 	putchar(10);
 
 	return (0);
