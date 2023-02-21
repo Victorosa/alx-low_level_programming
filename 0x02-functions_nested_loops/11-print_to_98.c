@@ -22,5 +22,5 @@ void print_to_98(int n)
 			n--;
 		}
 	}
-	_putchar(98 + '0');
+	printf("%d, ", n);
 }
