@@ -8,8 +8,8 @@
 
 int main(void)
 {
-	unsigned long sum;
-	unsigned long first, second;
+	long long sum;
+	long long first, second;
 	int count;
 
 	sum = 0;
@@ -20,14 +20,14 @@ int main(void)
 	while (count < 97)
 	{
 		sum = first + second;
-		printf("%lu, ", sum);
+		printf("%lld, ", sum);
 		first = second;
 		second = sum;
 
 		count++;
 	}
 	sum = first + second;
-	printf("%lu\n", sum);
+	printf("%lld\n", sum);
 
 	return (0);
 }
