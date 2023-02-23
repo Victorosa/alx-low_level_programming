@@ -1,29 +1,29 @@
 #include "main.h"
 /**
- * print_square- multiplies two numbers
- * @size: accepts an integer
- * Description: program will assign a random number to the variable n each time
- * it is executed.
+ * print_square - draws a square
+ * @size: length and width of square
  *
- * Return: returns the answer
+ * Return: void
  */
 
 void print_square(int size)
 {
-	int v = size;
-	int j = 0;
+	int row;
+	int column;
 
-	while (v > 0)
+	if (size > 0)
 	{
-		j = 0;
-
-		while (j < size)
+		for (row = 0; row < size; row++)
 		{
-			_putchar('#');
-			j++;
+			for (column = 0; column < size; column++)
+			{
+				_putchar('#');
+			}
+			_putchar('\n');
 		}
+	}
+	else
+	{
 		_putchar('\n');
-		v--;
 	}
 }
-
