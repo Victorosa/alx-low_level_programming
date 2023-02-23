@@ -1,35 +1,36 @@
 #include "main.h"
+
 /**
- * print_triangle- multiplies two numbers
- * @size: accepts an integer
- * Description: program will assign a random number to the variable n each time
- * it is executed.
+ * print_triangle - prints a triangle
+ * @size: length of sides minus hypotenuse
  *
- * Return: returns the answer
+ * Return: void
  */
+
 void print_triangle(int size)
 {
-	int v = size;
-	int j = 0;
+	int line = 0;
+	int spaces;
+	int hashes;
 
-	while (v > 0)
+	if (size > 0)
 	{
-		j = 0;
-
-		while (j < size)
+		while (line < size)
 		{
-			if (j > v - 2)
-			{
-				_putchar('#');
-				j++;
-			}
-			else
+			for (spaces = size - 1; spaces > line; spaces--)
 			{
 				_putchar(' ');
-				j++;
 			}
+			for (hashes = 0; hashes < line + 1; hashes++)
+			{
+				_putchar('#');
+			}
+			_putchar('\n');
+			line++;
 		}
+	}
+	else
+	{
 		_putchar('\n');
-		v--;
 	}
 }
