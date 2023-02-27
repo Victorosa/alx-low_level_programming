@@ -9,7 +9,7 @@
 
 void _puts(char *str)
 {
-	puts(str);
+	printf(str);
 
 	_putchar('\n');
 }
