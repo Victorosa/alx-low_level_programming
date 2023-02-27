@@ -9,7 +9,9 @@
 
 void _puts(char *str)
 {
-	printf(str);
-
+	for (; *str != '\0'; str++)
+	{
+		_putchars(str);
+	}
 	_putchar('\n');
 }
