@@ -7,7 +7,7 @@
   *
   * Return: ...
   */
-char *rot13(char *s)
+char *100-rot13(char *s)
 {
 	int a = 0;
 
