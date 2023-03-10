@@ -1,6 +1,7 @@
 #include "main.h"
 
 /**
+<<<<<<< HEAD
  * sqrt2 - Makes possible to evaluate from 1 to n
  * @a: same number as n
  * @b: number that iterates from 1 to n
@@ -26,4 +27,30 @@ int sqrt2(int a, int b)
 int _sqrt_recursion(int n)
 {
 	return (sqrt2(n, 1));
+=======
+ * _sqrt_recursion - main funct
+ * @n: int n
+ * Return: int
+ */
+int _sqrt_recursion(int n)
+{
+	return (_sqrt(n, 1));
+}
+
+/**
+ * _sqrt - _sqrt_recursion
+ * @n: integer paramtr
+ * @i: integer parameter
+ * Return: sqrt
+ */
+int _sqrt(int n, int i)
+{
+	if (n < 0)
+		return (-1);
+	if ((i * i) > n)
+		return (-1);
+	if (i * i == n)
+		return (i);
+	return (_sqrt(n, i + 1));
+>>>>>>> origin/master
 }

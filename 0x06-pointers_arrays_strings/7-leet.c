@@ -31,4 +31,7 @@ char *leet(char *s)
 
 	return (s);
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master

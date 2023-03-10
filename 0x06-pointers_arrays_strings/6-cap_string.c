@@ -30,4 +30,7 @@ char *cap_string(char *s)
 
 	return (s);
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master

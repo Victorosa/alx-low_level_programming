@@ -27,4 +27,7 @@ void reverse_array(int *a, int n)
 		p--;
 	}
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master

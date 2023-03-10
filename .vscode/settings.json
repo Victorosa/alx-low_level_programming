@@ -1,8 +1,14 @@
 {
+<<<<<<< HEAD
     "cSpell.words": [
         "diagsums",
         "gfuihgikuhois",
         "palind",
         "wildcmp"
     ]
+=======
+    "files.associations": {
+        "main.h": "c"
+    }
+>>>>>>> origin/master
 }

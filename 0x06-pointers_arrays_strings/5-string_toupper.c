@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
 #include "main.h"
 
 /**
@@ -22,4 +26,7 @@ char *string_toupper(char *p)
 
 	return (p);
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
