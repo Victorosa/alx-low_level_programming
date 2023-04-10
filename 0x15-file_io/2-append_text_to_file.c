@@ -12,14 +12,15 @@
  */
 int append_text_to_file(const char *filename, char *text)
 {
+	int fd, bytes_written = 0;
+
 	if (filename == NULL)
-		return -1;
+		return (-1);
 
-	int fd = open(filename, O_WRONLY | O_APPEND);
+	fd = open(filename, O_WRONLY | O_APPEND);
 	if (fd == -1)
-		return -1;
+		return (-1);
 
-	int bytes_written = 0;
 	if (text != NULL)
 	{
 		while (text[bytes_written])
@@ -29,10 +30,10 @@ int append_text_to_file(const char *filename, char *text)
 		if (bytes_written == -1)
 		{
 			close(fd);
-			return -1;
+			return (-1);
 		}
 	}
 
 	close(fd);
-	return 1;
+	return (1);
 }
