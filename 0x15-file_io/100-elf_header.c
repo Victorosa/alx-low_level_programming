@@ -121,10 +121,10 @@ void print_version(unsigned char *e_ident)
 }
 
 /**
- * victor - Prints the OS/ABI of an ELF header.
+ * print_osabi - Prints the OS/ABI of an ELF header.
  * @e_ident: A pointer to an array containing the ELF version.
  */
-void victor(unsigned char *e_ident)
+void print_osabi(unsigned char *e_ident)
 {
 	printf("  OS/ABI:                            ");
 
@@ -261,10 +261,10 @@ void close_elf(int elf)
 int main(int __attribute__((__unused__)) argc, char *argv[])
 {
 	Elf64_Ehdr *header;
-	int o, r;
+	int t, y;
 
 	o = open(argv[1], O_RDONLY);
-	if (o == -1)
+	if (t == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read file %s\n", argv[1]);
 		exit(98);
@@ -276,8 +276,8 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't read file %s\n", argv[1]);
 		exit(98);
 	}
-	r = read(o, header, sizeof(Elf64_Ehdr));
-	if (r == -1)
+	y = read(t, header, sizeof(Elf64_Ehdr));
+	if (y == -1)
 	{
 		free(header);
 		close_elf(o);
@@ -291,7 +291,7 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	print_class(header->e_ident);
 	print_data(header->e_ident);
 	print_version(header->e_ident);
-	victor(header->e_ident);
+	print_osabi(header->e_ident);
 	print_abi(header->e_ident);
 	print_type(header->e_type, header->e_ident);
 	print_entry(header->e_entry, header->e_ident);
