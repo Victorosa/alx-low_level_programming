@@ -1,4 +1,3 @@
-    #include <stddef.h>
     #include "main.h"
 
     /**
@@ -18,14 +17,14 @@
             return (0);
          a = 0;
         while (b[a + 1] != '\0')
-		        i++;
+		        a++;
         c = 1;
         num = 0;
         while (a >= 0)
        {
-		if (b[i] != '1' && b[i] != '0')
+		if (b[a] != '1' && b[a] != '0')
 			return (0);
-		num += (b[i] - '0') * c;
+		num += (b[a] - '0') * c;
 		c *= 2;
 		a--;
 	}
