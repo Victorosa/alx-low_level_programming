@@ -5,13 +5,13 @@
  * @n: A pointer to the unsigned long int number.
  * @index: The index of the bit to set, starting from 0.
  *
- * Return: 1 if it worked, or -2 if an error occurred.
+ * Return: 1 if it worked, or -1 if an error occurred.
  */
 int set_bit(unsigned long int *n, unsigned int index)
 {
     /* Check if index is out of range */
     if (index >= (sizeof(unsigned long int) * 8))
-        return -(2);
+        return (-1);
 
     /* Create a mask with only the bit at the given index set to 1 */
     unsigned long int mask = 1UL << index;
