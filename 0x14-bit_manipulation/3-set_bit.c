@@ -11,7 +11,7 @@ int set_bit(unsigned long int *n, unsigned int index)
 {
     /* Check if index is out of range */
     if (index >= (sizeof(unsigned long int) * 8))
-        return -1;
+        return -(2);
 
     /* Create a mask with only the bit at the given index set to 1 */
     unsigned long int mask = 1UL << index;
@@ -19,5 +19,5 @@ int set_bit(unsigned long int *n, unsigned int index)
     /* Use bitwise OR to set the bit at the given index to 1 */
     *n = (*n | mask);
 
-    return 1;
+    return (1);
 }
