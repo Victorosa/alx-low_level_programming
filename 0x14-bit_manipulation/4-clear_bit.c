@@ -8,10 +8,8 @@
 int clear_bit(unsigned long int *n, unsigned int index)
 {
 	unsigned int mask;
-
 	if (index > 32)
 		return (-1);
-
         /* Create a mask with only the bit at the given index set to 0 */
 	mask = 1 << index;
      /* Use bitwise AND to set the bit at the given index to 0 */
