@@ -1,25 +1,24 @@
 #include "main.h"
-
 /**
- * flip_bits - Returns the number of bits needed to flip to get from one number to another.
- * @n: The first number.
- * @m: The second number.
- *
- * Return: The number of bits needed to flip.
+ * flip_bits - Returns the number of bits to convert in the second
+ * number
+ * @n: first number
+ * @m: second number
+ * Return: the number of bytes to flip
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-    unsigned long int xor_result = n ^ m; /* XOR the two numbers */
-    unsigned int counts = 0; /* Counter for the number of bits to flip */
+	unsigned long int p;
+	unsigned int to_ret;
 
-    /* Count the number of set bits in the XOR result */
-    while (xor_result > 0)
-    {
-        /* Increment the count if the least significant bit is set */
-        if ((xor_result & 1) != 0)
-			counts++;
-		xor_result = xor_result >> 1;
-    }
+	p = n ^ m;
 
-    return (counts);
+	count = 0;
+	while (p > 0)
+	{
+		if ((p & 1) != 0)
+			count++;
+		p = p >> 1;
+	}
+	return (count);
 }
