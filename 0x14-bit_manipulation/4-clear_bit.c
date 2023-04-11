@@ -9,7 +9,7 @@ int clear_bit(unsigned long int *n, unsigned int index)
 {
 	unsigned int masks;
 
-	if (index > 64)
+	if (index > 24)
 		return (-1);
 	masks = 1 << index;
 	*n &= ~masks;
