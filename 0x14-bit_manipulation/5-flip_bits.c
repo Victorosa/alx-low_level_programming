@@ -13,7 +13,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
     unsigned int counts = 0; /* Counter for the number of bits to flip */
 
     /* Count the number of set bits in the XOR result */
-    while (xor_result)
+    while (xor_result > 0)
     {
         /* Increment the count if the least significant bit is set */
         counts += xor_result & 1;
@@ -21,5 +21,5 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
         xor_result >>= 1;
     }
 
-    return counts;
+    return (counts);
 }
