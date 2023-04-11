@@ -11,7 +11,9 @@ int clear_bit(unsigned long int *n, unsigned int index)
 
 	if (index > 24)
 		return (-1);
+   /* Create a mask with only the bit at the given index set to 0 */
 	masks = 1 << index;
+  /* Use bitwise AND to set the bit at the given index to 0 */
 	*n &= ~masks;
 	return (1);
 }
