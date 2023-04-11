@@ -11,14 +11,14 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	unsigned long int i;
 	unsigned int to_ret;
 
-	p = n ^ m;
+	i = n ^ m;
 
 	count = 0;
-	while (p > 0)
+	while (i > 0)
 	{
-		if ((p & 1) != 0)
+		if ((i & 1) != 0)
 			count++;
-		i = p >> 1;
+		i = i >> 1;
 	}
 	return (count);
 }
