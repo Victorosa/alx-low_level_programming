@@ -16,9 +16,9 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
     while (xor_result > 0)
     {
         /* Increment the count if the least significant bit is set */
-        counts += xor_result & 1;
-        /* Shift the XOR result to the right by 1 bit */
-        xor_result >>= 1;
+        if ((xor_result & 1) != 0)
+			counts++;
+		xor_result = xor_result >> 1;
     }
 
     return (counts);
