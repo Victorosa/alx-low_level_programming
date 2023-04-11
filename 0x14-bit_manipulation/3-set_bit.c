@@ -8,11 +8,12 @@
 int set_bit(unsigned long int *n, unsigned int index)
 {
 	unsigned int mask;
-
+ /* Create a mask with only the bit at the given index set to 1 */
 	if (index > 32)
 		return (-1);
 
 	mask = 1 << index;
+    /* Use bitwise OR to set the bit at the given index to 1 */
 	*n = *n | mask;
 	return (1);
 }
