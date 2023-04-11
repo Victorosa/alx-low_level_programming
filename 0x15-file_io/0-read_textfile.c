@@ -1,7 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <fcntl.h>
 #include "main.h"
 
 /**
@@ -34,7 +30,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
     read_bytes = read(file, buffer, letters);
 
-    if (read_bytes == -1)
+    if (read_bytes < 0)
     {
         close(file);
         free(buffer);
@@ -53,5 +49,5 @@ ssize_t read_textfile(const char *filename, size_t letters)
     close(file);
     free(buffer);
 
-    return read_bytes;
+    return (read_bytes);
 }
